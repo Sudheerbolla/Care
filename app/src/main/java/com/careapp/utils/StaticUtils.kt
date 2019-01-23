@@ -67,6 +67,12 @@ class StaticUtils {
             }
         }
 
+        public fun getUTCTimeStamp(): String? {
+            val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss z")
+            simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"))
+            return simpleDateFormat.format(Date())
+        }
+
         public fun setExpandableListViewHeight(listView: ExpandableListView, group: Int) {
             val listAdapter = listView.expandableListAdapter
             var totalHeight = 0

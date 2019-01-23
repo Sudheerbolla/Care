@@ -24,6 +24,7 @@ class DatabaseHandler private constructor(context: Context) :
         db.execSQL(TableAnswerGroup.CREATE_TABLE)
         db.execSQL(TableAnswerInput.CREATE_TABLE)
         db.execSQL(TableAnswers.CREATE_TABLE)
+        db.execSQL(TableAnswersQueue.CREATE_TABLE)
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -35,6 +36,7 @@ class DatabaseHandler private constructor(context: Context) :
                 db.execSQL("DROP TABLE IF EXISTS " + TableAnswerGroup.TABLE_NAME)
                 db.execSQL("DROP TABLE IF EXISTS " + TableAnswerInput.TABLE_NAME)
                 db.execSQL("DROP TABLE IF EXISTS " + TableAnswers.TABLE_NAME)
+                db.execSQL("DROP TABLE IF EXISTS " + TableAnswersQueue.TABLE_NAME)
                 onCreate(db)
             }
         } catch (e: Exception) {
@@ -69,6 +71,7 @@ class DatabaseHandler private constructor(context: Context) :
         writableDatabase!!.execSQL("delete from " + TableAnswerGroup.TABLE_NAME)
         writableDatabase!!.execSQL("delete from " + TableAnswerInput.TABLE_NAME)
         writableDatabase!!.execSQL("delete from " + TableAnswers.TABLE_NAME)
+        writableDatabase!!.execSQL("delete from " + TableAnswersQueue.TABLE_NAME)
     }
 
     @Synchronized
@@ -79,6 +82,7 @@ class DatabaseHandler private constructor(context: Context) :
         writableDatabase!!.execSQL("delete from " + TableAnswerGroup.TABLE_NAME)
         writableDatabase!!.execSQL("delete from " + TableAnswerInput.TABLE_NAME)
         writableDatabase!!.execSQL("delete from " + TableAnswers.TABLE_NAME)
+        writableDatabase!!.execSQL("delete from " + TableAnswersQueue.TABLE_NAME)
     }
 
     @Synchronized

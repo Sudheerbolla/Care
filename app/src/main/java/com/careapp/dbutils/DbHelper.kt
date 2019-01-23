@@ -6,6 +6,7 @@ import android.database.Cursor
 import android.database.DatabaseUtils
 import android.text.TextUtils
 import com.careapp.models.*
+import org.json.JSONObject
 
 class DbHelper(context: Context) {
 
@@ -182,6 +183,50 @@ class DbHelper(context: Context) {
             e.printStackTrace()
         }
         return 0
+    }
+
+    @Synchronized
+    fun addAnswer(jsonObject: JSONObject): Long {
+        databaseHandler.getWritableDatabase()
+        val values = ContentValues()
+
+        values.put(TableAnswers.questionId, jsonObject.optString("questionId"))
+        values.put(TableAnswers.anganwadiId, jsonObject.optString("anganwadiCenterId"))
+        values.put(TableAnswers.houseId, jsonObject.optString("houseId"))
+        values.put(TableAnswers.recordedAt, jsonObject.optString("recorded_at"))
+        values.put(TableAnswers.location, jsonObject.optString("location"))
+        values.put(TableAnswers.answer, jsonObject.optString("answers"))
+        values.put(TableAnswers.answerId, jsonObject.optString("answerId"))
+        try {
+            return databaseHandler.insertData(TableAnswers.TABLE_NAME, values)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return 0
+    }
+
+    @Synchronized
+    fun getAnswer(questionId: String, anganwadiId: String): JSONObject {
+        val selectQuery =
+            "select * FROM " + TableAnswers.TABLE_NAME + " WHERE " + TableAnswers.questionId + "='" + questionId + "' AND " + TableAnswers.anganwadiId + "='" + anganwadiId + "'"
+        val answerObject = JSONObject()
+        databaseHandler.getReadableDatabase()
+        val cursor = databaseHandler.selectData(selectQuery, true)
+        if (cursor.moveToFirst()) {
+            do {
+                answerObject.put("questionId", cursor.getString(cursor.getColumnIndex(TableAnswers.questionId)))
+                answerObject.put("anganwadiCenterId", cursor.getString(cursor.getColumnIndex(TableAnswers.anganwadiId)))
+                answerObject.put("houseId", cursor.getString(cursor.getColumnIndex(TableAnswers.houseId)))
+                answerObject.put("answers", cursor.getString(cursor.getColumnIndex(TableAnswers.answer)))
+                answerObject.put("answerId", cursor.getString(cursor.getColumnIndex(TableAnswers.answerId)))
+                answerObject.put("recorded_at", cursor.getString(cursor.getColumnIndex(TableAnswers.recordedAt)))
+                answerObject.put("location", cursor.getString(cursor.getColumnIndex(TableAnswers.location)))
+            } while (cursor.moveToNext())
+        }
+        if (!cursor.isClosed()) {
+            cursor.close()
+        }
+        return answerObject
     }
 
     @Synchronized

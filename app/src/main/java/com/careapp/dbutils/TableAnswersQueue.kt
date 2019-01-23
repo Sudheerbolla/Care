@@ -1,6 +1,6 @@
 package com.careapp.dbutils
 
-internal object TableAnswers {
+internal object TableAnswersQueue {
 
     var Z_PK: String
 
@@ -9,11 +9,8 @@ internal object TableAnswers {
     var answerId: String? = null
     var houseId: String? = null
     var answer: String? = null
-    var recordedAt: String? = null
-    var location: String? = null
 
-
-    val TABLE_NAME = "TableAnswers"
+    val TABLE_NAME = "TableAnswersQueue"
     var CREATE_TABLE: String
 
     init {
@@ -24,11 +21,9 @@ internal object TableAnswers {
         answerId = "zAnswerId"
         answer = "zAnswer"
         houseId = "zHouseId"
-        recordedAt = "zRecordedAt"
-        location = "zLocation"
 
         CREATE_TABLE =
-                "create table if not exists $TABLE_NAME ( $Z_PK INTEGER PRIMARY KEY NOT NULL, $answer TEXT, $anganwadiId TEXT, $answerId TEXT, $questionId TEXT, $recordedAt TEXT, $location TEXT, $houseId TEXT);"
+                "create table if not exists $TABLE_NAME ( $Z_PK INTEGER PRIMARY KEY NOT NULL, $answer TEXT, $anganwadiId TEXT, $answerId TEXT, $questionId TEXT, $houseId TEXT, UNIQUE ($answerId) ON CONFLICT REPLACE);"
 
     }
 

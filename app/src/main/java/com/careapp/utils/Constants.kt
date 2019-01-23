@@ -5,13 +5,16 @@ class Constants {
     companion object {
         val ONE_DAY_INTERVAL = 24 * 60 * 60 * 1000L // 1 Day
 
-        val DELAY_TIME = 2000.toLong()
+        //        val DELAY_TIME = 2000.toLong()
+        val QUARTER_SECOND_DELAY = 250.toLong()
+        val HALF_SECOND_DELAY = 500.toLong()
+        val ONE_SECOND_DELAY = 1000.toLong()
+        val BACK_PRESSED_TIME = 2000.toLong()
+
+        val DELAY_TIME = QUARTER_SECOND_DELAY
         var bTwo: Boolean? = false
 
-        val QUARTER_SECOND_DELAY = 250.toLong()
-        val HALF_SECOND_DELAY = 500
-        val ONE_SECOND_DELAY = 1000
-        val BACK_PRESSED_TIME = 2000
+        val LOCATION_REQUEST_CODE = 1
 
         val TWENTY_FIVE = 25
         val THIRTY = 30
@@ -29,6 +32,7 @@ class Constants {
         val CONTENT_TYPE = "Content-Type"
         val CONTENT_TYPE_JSON = "application/json"
         val CONTENT_TYPE_TEXT_PLAIN = "text/plain"
+        val CONTENT_TYPE_FORM_URL_ENCODED = "application/x-www-form-urlencoded"
         val AUTHORIZATION = "Authorization"
         val BEARER = "Bearer "
         val EMAIL_ID = "email"

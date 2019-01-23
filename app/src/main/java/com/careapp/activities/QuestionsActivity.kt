@@ -1,21 +1,31 @@
 package com.careapp.activities
 
+import android.Manifest
+import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.databinding.DataBindingUtil
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
+import android.net.Uri
 import android.os.Bundle
+import android.provider.Settings
+import android.support.v4.app.ActivityCompat
 import android.util.Log
 import android.view.View
 import com.careapp.BaseApplication
+import com.careapp.BuildConfig
 import com.careapp.R
 import com.careapp.adapters.ViewPagerAdapter
 import com.careapp.databinding.ActivityQuestionsBinding
 import com.careapp.dbutils.DbHelper
 import com.careapp.interfaces.IParserListener
 import com.careapp.models.QuestionsModel
-import com.careapp.utils.AppLocalStorage
-import com.careapp.utils.PopUtils
-import com.careapp.utils.StaticUtils
+import com.careapp.utils.*
 import com.careapp.views.CustomViewPagerSingleLoad
 import com.careapp.wsutils.WSCallBacksListener
 import com.careapp.wsutils.WSUtils
@@ -23,7 +33,7 @@ import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import org.json.JSONException
 
-class QuestionsActivity : BaseActivity(), View.OnClickListener, IParserListener<JsonObject> {
+class QuestionsActivity : BaseActivity(), View.OnClickListener, IParserListener<JsonObject>, LocationListener {
 
     public lateinit var binding: ActivityQuestionsBinding
     private lateinit var categoryId: String
@@ -31,6 +41,139 @@ class QuestionsActivity : BaseActivity(), View.OnClickListener, IParserListener<
     private var dialog: Dialog? = null
     private var questionsArrayList: ArrayList<QuestionsModel>? = null
     private lateinit var viewPagerAdapter: ViewPagerAdapter
+
+    private var isGPS: Boolean? = false
+    private var isNetwork: Boolean? = false
+    private var canGetLocation: Boolean? = true
+
+    public lateinit var lastKnownLocation: Location
+    private val MIN_DISTANCE_CHANGE_FOR_UPDATES: Float = 10.toFloat()
+    private val MIN_TIME_BW_UPDATES: Long = 1000 * 60 * 10.toLong()
+    private lateinit var locationManager: LocationManager
+
+    override fun onResume() {
+        super.onResume()
+        if (isLocationEnabled) {
+            if (RuntimePermissionUtils.checkPermission(
+                    this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+                ) == PackageManager.PERMISSION_GRANTED
+            ) {
+                getLocation()
+            } else {
+                requestPermissions()
+            }
+        } else {
+            showAlert()
+        }
+    }
+
+    private fun requestPermissions() {
+        val shouldProvideRationale = ActivityCompat.shouldShowRequestPermissionRationale(
+            this,
+            Manifest.permission.ACCESS_COARSE_LOCATION
+        )
+        if (shouldProvideRationale) {
+            StaticUtils.showIndefiniteToast(window.decorView.rootView,
+                "Location permission is manditory to use the application.",
+                "Allow",
+                View.OnClickListener {
+                    RuntimePermissionUtils.requestForPermission(
+                        this,
+                        arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION),
+                        Constants.LOCATION_REQUEST_CODE
+                    )
+                })
+        } else {
+            StaticUtils.showIndefiniteToast(window.decorView.rootView,
+                "Location permission is manditory to use the application.",
+                "Allow",
+                View.OnClickListener {
+                    val intent = Intent()
+                    intent.action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+                    val uri = Uri.fromParts("package", BuildConfig.APPLICATION_ID, null)
+                    intent.data = uri
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intent)
+                })
+        }
+    }
+
+    private fun showAlert() {
+        val dialog = AlertDialog.Builder(this)
+        dialog.setTitle("Enable Location")
+            .setMessage("Your Location Settings is set to 'Off'.\nPlease Enable Location to use this app")
+            .setPositiveButton("Location Settings") { paramDialogInterface, paramInt ->
+                val myIntent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
+                startActivity(myIntent)
+            }
+        dialog.show()
+    }
+
+    private val isLocationEnabled: Boolean
+        get() {
+            return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(
+                LocationManager.NETWORK_PROVIDER
+            )
+        }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == Constants.LOCATION_REQUEST_CODE) {
+            if (StaticUtils.isAllPermissionsGranted(grantResults)) {
+                getLocation()
+            } else {
+                StaticUtils.showIndefiniteToast(window.decorView.rootView,
+                    "Location permission is manditory to use the application.",
+                    "Allow",
+                    View.OnClickListener {
+                        val intent = Intent()
+                        intent.action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+                        val uri = Uri.fromParts("package", BuildConfig.APPLICATION_ID, null)
+                        intent.data = uri
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                        startActivity(intent)
+                    })
+            }
+        }
+    }
+
+    @SuppressLint("MissingPermission")
+    private fun getLocation() {
+        try {
+            locationManager.requestLocationUpdates(
+                LocationManager.GPS_PROVIDER,
+                MIN_TIME_BW_UPDATES,
+                MIN_DISTANCE_CHANGE_FOR_UPDATES,
+                this
+            )
+            lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        try {
+            locationManager.requestLocationUpdates(
+                LocationManager.NETWORK_PROVIDER,
+                MIN_TIME_BW_UPDATES,
+                MIN_DISTANCE_CHANGE_FOR_UPDATES,
+                this
+            )
+            lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        try {
+            locationManager.requestLocationUpdates(
+                LocationManager.PASSIVE_PROVIDER,
+                MIN_TIME_BW_UPDATES,
+                MIN_DISTANCE_CHANGE_FOR_UPDATES,
+                this
+            )
+            lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
 
     fun showProgress() {
         if (dialog != null && !dialog!!.isShowing) dialog!!.show()
@@ -43,6 +186,11 @@ class QuestionsActivity : BaseActivity(), View.OnClickListener, IParserListener<
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_questions)
+
+        locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        isGPS = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
+        isNetwork = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
+
         binding.txtHeading.text = "Questions"
         getBundleData()
         initComponents()
@@ -233,5 +381,20 @@ class QuestionsActivity : BaseActivity(), View.OnClickListener, IParserListener<
             }
         }
     }
+
+    override fun onLocationChanged(location: Location?) {
+        lastKnownLocation.set(location)
+        Log.e("loc: ", lastKnownLocation.latitude.toString() + " " + lastKnownLocation.longitude)
+    }
+
+    override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
+    }
+
+    override fun onProviderEnabled(provider: String?) {
+    }
+
+    override fun onProviderDisabled(provider: String?) {
+    }
+
 
 }

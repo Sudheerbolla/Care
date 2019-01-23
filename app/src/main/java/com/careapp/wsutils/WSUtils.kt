@@ -24,6 +24,7 @@ object WSUtils {
     val REQ_FOR_GET_BLOCKS = 109
     val REQ_FOR_GET_AWCS = 110
     val REQ_FOR_ADD_AWCS = 111
+    val REQ_FOR_LOGOUT = 112
 
     val NAME = "name"
     val CID = "cid"

@@ -12,6 +12,9 @@ interface WSInterface {
     @POST("/api/v1/users/login.json")
     fun requestForLogin(@Field("username") username: String, @Field("password") password: String): Call<JsonElement>
 
+    @GET("/api/v1/users/logout.json")
+    fun requestForLogout(@Query("token") token: String): Call<JsonElement>
+
     @GET("/api/v1/centers.json")
     fun getAnganwadiCenters(@Query("token") token: String): Call<JsonElement>
 
@@ -33,6 +36,8 @@ interface WSInterface {
     @DELETE("/orders/{orderId}/products/{orderProductId}")
     fun deleteProductFromOrder(@Path("orderId") orderId: String, @Path("orderProductId") orderProductId: String): Call<JsonElement>
 
+//    @Headers("{content-type: application/x-www-form-urlencoded;charset=UTF-8")
+    @Headers("Content-Type: application/json; charset=utf-8")
     @POST("/api/v1/questions/{questionId}/answers.json")
     fun postAnswerToQuestion(@Path("questionId") questionId: String, @Body body: RequestBody, @Query("token") token: String): Call<JsonElement>
 

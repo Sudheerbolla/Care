@@ -69,8 +69,10 @@ class QuestionFragmentSingleGroup : BaseFragment(), View.OnClickListener, IParse
     private lateinit var answerGroup: AnswerGroupsModel
     private lateinit var anganwadiId: String
 
-    private var padding10: Int = 0
-    private var padding6: Int = 0
+    private var padding10: Int = 10
+    private var padding6: Int = 6
+
+    private lateinit var dbHelper: DbHelper
 
     fun showProgress() {
         if (dialog != null && !dialog!!.isShowing) dialog!!.show()
@@ -86,6 +88,7 @@ class QuestionFragmentSingleGroup : BaseFragment(), View.OnClickListener, IParse
         dialog = PopUtils.SimpleProgressDialog(questionsActivity)
         padding10 = StaticUtils.pxFromDp(questionsActivity, 10.0f).toInt()
         padding6 = StaticUtils.pxFromDp(questionsActivity, 6.0f).toInt()
+        dbHelper = DbHelper(questionsActivity)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -259,7 +262,41 @@ class QuestionFragmentSingleGroup : BaseFragment(), View.OnClickListener, IParse
 //            DbHelper(questionsActivity).addHouseToList()
 //        }
 //        questionsActivity.goToNextQuestion()
+
+//                        "location": {"lat": 44.106667, "lng": -73.935833},
+//                        "recorded_at": "2018-12-30 19:05:29 UTC"
+
         try {
+            var locationObject: JSONObject?
+            try {
+                if (!answerObject!!.has("recorded_at")) {
+                    answerObject!!.put("recorded_at", StaticUtils.getUTCTimeStamp())
+                } else {
+                    answerObject!!.remove("recorded_at")
+                    answerObject!!.put("recorded_at", StaticUtils.getUTCTimeStamp())
+                }
+                locationObject = JSONObject()
+                locationObject.put("lat", "" + questionsActivity.lastKnownLocation.latitude)
+                locationObject.put("lng", "" + questionsActivity.lastKnownLocation.longitude)
+            } catch (e: Exception) {
+                e.printStackTrace()
+                locationObject = null
+            }
+
+            if (locationObject == null) {
+                StaticUtils.showSimpleToast(
+                    questionsActivity,
+                    "Error fetching location. Please restart the application and try again."
+                )
+            } else {
+                if (!answerObject!!.has("location")) {
+                    answerObject!!.put("location", locationObject)
+                } else {
+                    answerObject!!.remove("location")
+                    answerObject!!.put("location", locationObject)
+                }
+            }
+
             val call = BaseApplication.wsInterface!!.postAnswerToQuestion(
                 questionsModel.questionId!!,
                 StaticUtils.getRequestBody(answerObject!!),
@@ -328,7 +365,6 @@ class QuestionFragmentSingleGroup : BaseFragment(), View.OnClickListener, IParse
                                 }
                             }
                         }
-
                         jsonObject.put("questionId", questionsModel.questionId)
                         jsonObject.put("anganwadiCenterId", anganwadiId)
                         jsonObject.put("houseId", "")
@@ -379,29 +415,12 @@ class QuestionFragmentSingleGroup : BaseFragment(), View.OnClickListener, IParse
 
     private fun parseAnswerQuestionResponse(jsonObject: JsonObject) {
         try {
-            val questionsModelOld = questionsModel
-            questionsModelOld.isAnswered = true
-            DbHelper(questionsActivity).addQuestion(questionsModelOld)
-            questionsActivity.goToNextQuestion()
-//            if (jsonObject.has("questions")) {
-//                val centersList = jsonObject.get("questions").asJsonArray
-//                if (!centersList.isJsonNull && centersList.size() > 0) {
-//                    for (jsonObjects in centersList) {
-//                        questionsArrayList!!.add(QuestionsModel(jsonObjects!! as JsonObject))
-//                    }
-////                    questionsArrayList?.sortedWith(compareBy { it.rank })
-//                    questionsArrayList!!.sortWith(compareBy { it.rank })
-//                }
-//                if (!questionsArrayList.isNullOrEmpty())
-//                    setViewPager() else StaticUtils.showSimpleToast(
-//                    this,
-//                    "No Questions available for this Category. Please check with different category."
-//                )
-//            } else StaticUtils.showIndefiniteToast(
-//                window.decorView.rootView!!,
-//                getString(R.string.something_went_wrong),
-//                getString(R.string.retry),
-//                View.OnClickListener { requestForGetQuestionsPerCategory() })
+            if (jsonObject.has("answerId")) {
+                answerObject?.put("answerId", jsonObject.get("answerId").asString)
+                dbHelper.addAnswer(answerObject!!)
+                questionsActivity.goToNextQuestion()
+            }
+            StaticUtils.showSimpleToast(questionsActivity, jsonObject.get("message").asString)
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -434,11 +453,12 @@ class QuestionFragmentSingleGroup : BaseFragment(), View.OnClickListener, IParse
         }
     }
 
-/*input_type values
-    1: checkbox
-    2: radio
-    3: textfield
-    4: textarea
+/*
+input_type values
+  1: checkbox
+  2: radio
+  3: textfield
+  4: textarea
 
 
 field :house_selection_preference, type: Integer
@@ -451,6 +471,7 @@ field :house_selection_preference, type: Integer
   # 6: Home delivery of daughter's child
   # 7: Hospital delivery of daughter-in-law's child
   # 8: Hospital delivery of daughter's child
-  # 9: Daughter-in-law's child */
+  # 9: Daughter-in-law's child
+*/
 
 }

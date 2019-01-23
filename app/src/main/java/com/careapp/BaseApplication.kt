@@ -26,7 +26,7 @@ class BaseApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        initRetrofit(applicationContext)
+        initRetrofit()
         changeLanguage(
             applicationContext,
             "hi_IN"
@@ -43,10 +43,10 @@ class BaseApplication : Application() {
     }
 
     object RetrofitInitialization {
-        fun initRetrofit(context: Context) {
+        fun initRetrofit() {
             val headerInterceptor = Interceptor { chain ->
                 val requestBuilder = chain.request().newBuilder()
-                requestBuilder.header(Constants.CONTENT_TYPE, Constants.CONTENT_TYPE_JSON)
+                requestBuilder.header(Constants.CONTENT_TYPE, Constants.CONTENT_TYPE_FORM_URL_ENCODED)
                 chain.proceed(requestBuilder.build())
             }
             okHttpClient = OkHttpClient().newBuilder().addInterceptor(headerInterceptor)
