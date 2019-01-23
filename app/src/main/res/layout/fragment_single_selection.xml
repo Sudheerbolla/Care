@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorGreen"
+            android:padding="@dimen/seven_dp">
+
+        <com.careapp.views.AppTextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:padding="@dimen/ten_dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sixteen_sp"
+                android:text="@string/this_is_simple_mcq_question_with_single_option_as_answer"/>
+
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifteen_dp"
+                app:cardBackgroundColor="@color/semi_transparent"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/five_dp"
+                app:cardElevation="@dimen/three_dp"
+                app:cardMaxElevation="@dimen/three_dp"
+                app:contentPadding="@dimen/five_dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <com.careapp.views.AppTextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/ten_dp"
+                        android:textColor="@color/colorWhite"
+                        android:drawableStart="@drawable/ic_next"
+                        android:drawablePadding="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/fourteen_sp"
+                        android:text="@string/this_is_a_hint_to_answer_the_above_question"/>
+
+                <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <RadioButton
+                            android:id="@+id/rbOption1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:padding="@dimen/seven_dp"
+                            android:layout_margin="@dimen/three_dp"
+                            android:text="@string/option_1"/>
+
+                    <RadioButton
+                            android:id="@+id/rbOption2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:padding="@dimen/seven_dp"
+                            android:layout_margin="@dimen/three_dp"
+                            android:checked="true"
+                            android:text="@string/option_2"/>
+
+                    <RadioButton
+                            android:id="@+id/rbOption3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:padding="@dimen/seven_dp"
+                            android:layout_margin="@dimen/three_dp"
+                            android:text="@string/option_3"/>
+
+                    <RadioButton
+                            android:id="@+id/rbOption4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite"
+                            android:padding="@dimen/seven_dp"
+                            android:layout_margin="@dimen/three_dp"
+                            android:text="@string/option_4"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</layout>

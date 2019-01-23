@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.careapp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.location.gps"/>
+    <uses-feature android:name="android.hardware.location.network"/>
+
+    <application
+            android:name=".BaseApplication"
+            android:allowBackup="false"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:networkSecurityConfig="@xml/network_security_config"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:usesCleartextTraffic="true"
+            android:hardwareAccelerated="true"
+            android:largeHeap="true"
+            android:theme="@style/AppTheme">
+
+        <uses-library
+                android:name="org.apache.http.legacy"
+                android:required="false"/>
+
+        <meta-data
+                android:name="com.sec.android.support.multiwindow"
+                android:value="true"/>
+        <meta-data
+                android:name="com.samsung.android.sdk.multiwindow.enable"
+                android:value="true"/>
+        <meta-data
+                android:name="com.samsung.android.sdk.multiwindow.multiinstance.enable"
+                android:value="true"/>
+        <meta-data
+                android:name="com.samsung.android.sdk.multiwindow.multiinstance.launchmode"
+                android:value="singleTask"/>
+        <meta-data
+                android:name="com.samsung.android.sdk.multiwindow.penwindow.enable"
+                android:value="true"/>
+
+        <activity
+                android:name=".activities.SplashActivity"
+                android:configChanges="locale"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".activities.MainActivity"
+                android:configChanges="locale"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+                android:name=".activities.LoginActivity"
+                android:configChanges="locale"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+                android:name=".activities.QuestionsActivity"
+                android:configChanges="locale"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+                android:name=".activities.DataLoadingActivity"
+                android:configChanges="locale"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+                android:name=".activities.HomesListActivity"
+                android:configChanges="locale"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+                android:name=".activities.AddAnganwadiCenterActivity"
+                android:configChanges="locale"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <provider
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="${applicationId}.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/filepaths"/>
+        </provider>
+        <!--<service android:name=".fcm.MyFirebaseMessagingService">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.google.firebase.MESSAGING_EVENT"/>-->
+        <!--</intent-filter>-->
+        <!--</service>-->
+
+        <!--<meta-data-->
+        <!--android:name="com.google.firebase.messaging.default_notification_icon"-->
+        <!--android:resource="@mipmap/ic_launcher"/>-->
+
+        <!--<meta-data-->
+        <!--android:name="com.google.firebase.messaging.default_notification_color"-->
+        <!--android:resource="@color/colorAccent"/>-->
+
+        <!--<meta-data-->
+        <!--android:name="com.google.firebase.messaging.default_notification_channel_id"-->
+        <!--android:value="@string/default_notification_channel_id"/>-->
+
+
+        <service
+                android:name=".services.UpdateDataToDBInBackground"
+                android:exported="false"/>
+
+        <receiver
+                android:name=".activities.DataLoadingActivity$DataDbReceiver"
+                android:enabled="true"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="com.careapp.BROADCAST_DATA_SYNC"/>
+                <action android:name="DataDbReceiver"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

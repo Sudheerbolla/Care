@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.careapp.views.AppTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/lblListItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@color/colorGreen"
+        android:paddingTop="@dimen/ten_dp"
+        android:paddingBottom="@dimen/ten_dp"
+        android:alpha="0.7"
+        android:paddingEnd="@dimen/five_dp"
+        android:longClickable="false"
+        android:textIsSelectable="false"
+        android:paddingStart="@dimen/fifteen_dp"
+        android:textSize="@dimen/fourteen_sp"
+        android:textColor="@color/colorBlack"/>
+

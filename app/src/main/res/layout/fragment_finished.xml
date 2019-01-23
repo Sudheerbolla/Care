@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:background="@color/colorOrange"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="@dimen/seven_dp">
+
+            <com.careapp.views.AppTextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/ten_dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twenty_sp"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:layout_marginEnd="@dimen/fifteen_dp"
+                    android:text="@string/anganwadi_questions_finished"/>
+
+            <ImageView
+                    android:id="@+id/imgDone"
+                    app:srcCompat="@drawable/ic_tick"
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/twohundred_dp"
+                    android:layout_height="@dimen/twohundred_dp"/>
+
+            <com.careapp.views.AppTextView
+                    android:id="@+id/txtHomeList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_green"
+                    android:gravity="center"
+                    android:minWidth="@dimen/onefifty_dp"
+                    android:padding="@dimen/eight_dp"
+                    android:longClickable="false"
+                    android:textIsSelectable="false"
+                    android:layout_marginTop="@dimen/twenty_dp"
+                    android:textSize="@dimen/fifteen_sp"
+                    android:textColor="@color/colorWhite"
+                    android:inputType="text"
+                    android:layout_gravity="center"
+                    android:textColorHint="@color/colorWhite"
+                    android:text="@string/home_list"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

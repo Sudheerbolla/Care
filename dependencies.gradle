@@ -1,0 +1,51 @@
+ext {
+    minSdkVersion = 17
+    compileSdkVersion = 28
+    targetSdkVersion = 28
+
+    hamcrestVersion = '1.3'
+    junitVersion = '4.12'
+    runnerVersion = '1.0.2'
+    supportVersion = '28.0.0'
+    gmsPlayVersion = '11.8.0'
+    gmsPlayVersionLatest = '16.0.0'
+    fcmVersion = '16.0.1'
+
+    kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    supportV4 = "com.android.support:support-v4:$supportVersion"
+    supportV7 = "com.android.support:support-v7:$supportVersion"
+    supportV13 = "com.android.support:support-v13:$supportVersion"
+    supportDesign = "com.android.support:design:$supportVersion"
+    supportAnnotations = "com.android.support:support-annotations:$supportVersion"
+    supportVectorDrawable = "com.android.support:support-vector-drawable:$supportVersion"
+    supportAppCompat = "com.android.support:appcompat-v7:$supportVersion"
+    recyclerview = "com.android.support:recyclerview-v7:$supportVersion"
+    cardview = "com.android.support:cardview-v7:$supportVersion"
+    constraintlayout = 'com.android.support.constraint:constraint-layout:1.1.3'
+    gmsMapsVersion = "com.google.android.gms:play-services-maps:$gmsPlayVersion"
+    gmsPlacesVersion = "com.google.android.gms:play-services-places:$gmsPlayVersionLatest"
+    gmslocationVersion = "com.google.android.gms:play-services-location:$gmsPlayVersionLatest"
+    gmsVisionVersion = "com.google.android.gms:play-services-vision:$gmsPlayVersion"
+
+    firebaseCoreversion = "com.google.firebase:firebase-core:$fcmVersion"
+    firebase = "com.google.firebase:firebase-messaging:17.3.4"
+    multiDex = "com.android.support:multidex:1.0.3"
+
+    glide = "com.github.bumptech.glide:glide:4.8.0"
+    glideAnnotationProcessor = "com.github.bumptech.glide:compiler:4.8.0"
+
+    greenBus = "org.greenrobot:eventbus:3.0.0"
+
+    gson = "com.google.code.gson:gson:2.8.2"
+    retrofit = "com.squareup.retrofit2:retrofit:2.4.0"
+    okhttp = "com.squareup.okhttp3:okhttp:3.10.0"
+    okhttplogginginterceptor = "com.squareup.okhttp3:logging-interceptor:3.6.0"
+    retrofitconverter = "com.squareup.retrofit2:converter-gson:2.3.0"
+
+    // Test
+    junit = "junit:junit:$junitVersion"
+    testRunner = "com.android.support.test:runner:$runnerVersion"
+    testRules = "com.android.support.test:rules:$runnerVersion"
+    espressocore = "com.android.support.test.espresso:espresso-core:3.0.2"
+}

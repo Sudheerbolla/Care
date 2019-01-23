@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- dimensions -->
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="one_dp">1dp</dimen>
+    <dimen name="two_dp">2dp</dimen>
+    <dimen name="three_dp">3dp</dimen>
+    <dimen name="four_dp">4dp</dimen>
+    <dimen name="five_dp">5dp</dimen>
+    <dimen name="six_dp">6dp</dimen>
+    <dimen name="seven_dp">7dp</dimen>
+    <dimen name="eight_dp">8dp</dimen>
+    <dimen name="nine_dp">9dp</dimen>
+    <dimen name="ten_dp">10dp</dimen>
+    <dimen name="eleven_dp">11dp</dimen>
+    <dimen name="twelve_dp">12dp</dimen>
+    <dimen name="thirteen_dp">13dp</dimen>
+    <dimen name="fourteen_dp">14dp</dimen>
+    <dimen name="fifteen_dp">15dp</dimen>
+    <dimen name="seventeed_dp">17dp</dimen>
+    <dimen name="twenty_dp">20dp</dimen>
+    <dimen name="twentyfive_dp">25dp</dimen>
+    <dimen name="thirty_dp">30dp</dimen>
+    <dimen name="thirty_three_dp">33dp</dimen>
+    <dimen name="thirtyfive_dp">35dp</dimen>
+    <dimen name="fourty_dp">40dp</dimen>
+    <dimen name="fourty_two_dp">42dp</dimen>
+    <dimen name="fourty_four_dp">44dp</dimen>
+    <dimen name="fifty_dp">50dp</dimen>
+    <dimen name="fifty_five_dp">55dp</dimen>
+    <dimen name="sixty_dp">60dp</dimen>
+    <dimen name="seventy_dp">70dp</dimen>
+    <dimen name="seventy_five_dp">75dp</dimen>
+    <dimen name="eighty_dp">80dp</dimen>
+    <dimen name="eighty_five_dp">85dp</dimen>
+    <dimen name="eighty_seven_dp">87dp</dimen>
+    <dimen name="ninety_dp">90dp</dimen>
+    <dimen name="hundred_dp">100dp</dimen>
+    <dimen name="onefifty_dp">150dp</dimen>
+    <dimen name="onesixty_dp">160dp</dimen>
+    <dimen name="one_ten_dp">110dp</dimen>
+    <dimen name="one_fifteen_dp">115dp</dimen>
+    <dimen name="one_twenty_dp">120dp</dimen>
+    <dimen name="one_twentyfive_dp">125dp</dimen>
+    <dimen name="one_thirty_dp">130dp</dimen>
+    <dimen name="one_forty_dp">140dp</dimen>
+    <dimen name="dashboardIconTileSize">150dp</dimen>
+    <dimen name="onehundred_seventy_dp">170dp</dimen>
+    <dimen name="twohundred_dp">200dp</dimen>
+    <dimen name="twohundred_fifty_dp">250dp</dimen>
+
+    <!--text sizes-->
+    <dimen name="eight_sp">8sp</dimen>
+    <dimen name="nine_sp">9sp</dimen>
+    <dimen name="ten_sp">10sp</dimen>
+    <dimen name="eleven_sp">11sp</dimen>
+    <dimen name="twelve_sp">12sp</dimen>
+    <dimen name="thirteen_sp">13sp</dimen>
+    <dimen name="fourteen_sp">14sp</dimen>
+    <dimen name="fifteen_sp">15sp</dimen>
+    <dimen name="seventeen_sp">17sp</dimen>
+    <dimen name="sixteen_sp">16sp</dimen>
+    <dimen name="eighteen_sp">18sp</dimen>
+    <dimen name="nineteen_sp">19sp</dimen>
+    <dimen name="twenty_sp">20sp</dimen>
+    <dimen name="twentyone_sp">21sp</dimen>
+    <dimen name="twentytwo_sp">22sp</dimen>
+    <dimen name="twentythree_sp">23sp</dimen>
+    <dimen name="twentyfour_sp">24sp</dimen>
+    <dimen name="twentyfive_sp">25sp</dimen>
+
+    <dimen name="dashboard_text_size">18sp</dimen>
+    <dimen name="dashboard_text_size_b">40sp</dimen>
+
+    <dimen name="seperator_height_small">0.5dp</dimen>
+
+    <dimen name="map_height">280dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="nav_header_guest_height">220dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="nav_width">270dp</dimen>
+
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+
+</resources>

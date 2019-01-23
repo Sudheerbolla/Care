@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:id="@+id/relTopBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/five_dp"
+                android:background="@color/colorPrimary">
+
+            <com.careapp.views.AppTextView
+                    android:id="@+id/txtHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/ten_dp"
+                    android:layout_centerInParent="true"
+                    android:text="@string/select_anganwadi_center"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:drawableEnd="@drawable/ic_down"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/seventeen_sp"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+                android:id="@+id/mainFrame"
+                android:layout_below="@id/relTopBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+</layout>

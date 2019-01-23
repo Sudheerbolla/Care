@@ -1,0 +1,397 @@
+<resources>
+    <string name="app_name">CareApp</string>
+    <string name="welcome_to_care">Welcome to Care!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="select_anganwadi_center">Select Anganwadi Center</string>
+    <string name="this_is_simple_mcq_question_with_single_option_as_answer">This is simple mcq question with single
+        option as answer
+    </string>
+    <string name="this_is_simple_mcq_question_with_one_or_many_answers">This is simple mcq question with one or many
+        answers
+    </string>
+    <string name="this_is_simple_mcq_question_where_answer_has_to_be_entered_by_user_in_the_input_field">This is simple
+        mcq question where answer has to be entered by user in the input field.
+    </string>
+    <string name="this_is_simple_mcq_question_where_user_can_enter_multiple_answers">This is simple
+        mcq question where user can enter multiple answers as a list.
+    </string>
+
+    <string name="this_is_a_hint_to_answer_the_above_question">This is a hint to answer the above question.</string>
+    <string name="option_1">Option 1</string>
+    <string name="option_2">Option 2</string>
+    <string name="option_3">Option 3</string>
+    <string name="option_4">Option 4</string>
+    <string name="write_your_answer_here">Write your answer here</string>
+    <string name="please_answer_this_before_proceeding">Please answer this before proceeding</string>
+    <string name="answer_1">Answer 1</string>
+    <string name="answer_2">Answer 2</string>
+    <string name="anganwadi_questions_finished">anganwadi questions finished</string>
+    <string name="home_list">Home List</string>
+    <string name="no_data_available_at_current_time">No data available at current time.</string>
+    <string name="please_enter_username">Please enter UserName.</string>
+    <string name="please_enter_password">Please enter password.</string>
+    <string name="ok">OK</string>
+    <string name="retry">Retry</string>
+    <string name="no_internet_connection">No Internet Connection.</string>
+    <string name="something_went_wrong">Something went wrong.</string>
+
+    <string name="select_district">Select District</string>
+    <string name="select_block">Select Block</string>
+    <string name="select_awc">Select AWC</string>
+
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_designation">Enter Designation</string>
+    <string name="enter_department">Enter Department</string>
+
+</resources>
+
+        <!--
+        <resources>
+            <string name="app_name">DevotTED</string>
+
+            <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDqUkWbZiLaCDoG3Em4rpVD-pqNlnInivA</string>
+
+            <string name="yes">हाँ</string>
+            <string name="no">नहीं</string>
+            <string name="ok">ठीक</string>
+            <string name="spiritual">आध्यात्मिक</string>
+            <string name="religious">धार्मिक</string>
+            <string name="wellness">कल्याण</string>
+            <string name="skip">छोड़ें</string>
+            <string name="next">आगामी</string>
+            <string name="start">समझ गया</string>
+            <string name="email_address">ईमेल पता</string>
+            <string name="password">पारण शब्द</string>
+            <string name="remember_me">मुझे याद रखना</string>
+            <string name="forgot_password"><u>पासवर्ड भूल गए ?</u></string>
+            <string name="forgot_password_g">पासवर्ड भूल गए</string>
+            <string name="login">लॉग इन करें</string>
+            <string name="new_user">नया उपयोगकर्ता ?</string>
+            <string name="register">रजिस्टर</string>
+            <string name="send_password_to_my_email">मेरे ईमेल पर पासवर्ड भेजें</string>
+            <string name="please_provide_your_registered_email_id_here">कृपया यहां अपनी पंजीकृत ईमेल आईडी प्रदान करें</string>
+            <string name="guest_user"><u>अतिथि उपयेागकर्ता</u></string>
+            <string name="full_name">पूरा नाम</string>
+            <string name="mobile_number">मोबाइल नंबर</string>
+            <string name="otp_will_be_sent_to_this_mobile_number_for_verification">सत्यापन के लिए ओटीपी इस मोबाइल नंबर पर भेजा जाएगा</string>
+            <string name="existing_user">मौजूदा उपयोगकर्ता?</string>
+            <string name="previous">पिछला</string>
+            <string name="please_select_language">कृपया भाषा का चयन करें</string>
+            <string name="you_can_change_your_language_choice_in_settings_at_any_time">आप किसी भी समय मेनू / सेटिंग्स में अपनी भाषा पसंद बदल सकते हैं.</string>
+            <string name="retry">पुन: प्रयास करें</string>
+            <string name="close">बंद करे</string>
+            <string name="no_internet_connection">कोई इंटरनेट कनेक्शन उपलब्ध नहीं है. \n\nआगे बढ़ने के लिए कृपया अपना मोबाइल डेटा या वाईफ़ाई चालू करें</string>
+            <string name="proceed">बढ़ना</string>
+            <string name="login_with_email">ईमेल / मोबाइल के साथ लॉगिन करें</string>
+            <string name="module_under_development">विकास के तहत मॉड्यूल</string>
+            <string name="login_with">से लोगिन करें :</string>
+            <string name="email">ईमेल</string>
+            <string name="please_enter_a_valid_password">पासवर्ड में कम से कम 6 अक्षर होना चाहिए</string>
+            <string name="please_enter_password">कृप्या पास्वर्ड भरो</string>
+            <string name="please_enter_a_valid_mobile_number">कृपया एक वैध मोबाइल नंबर दर्ज करें</string>
+            <string name="please_enter_mobile_number">कृपया मोबाइल नंबर दर्ज करें</string>
+            <string name="please_enter_a_valid_email_address">कृपया एक वैध ई - मेल एड्रेस डालें</string>
+            <string name="please_enter_email_address">कृपया ईमेल पता दर्ज करें</string>
+            <string name="please_enter_fullname">पूरा नाम दर्ज करें</string>
+            <string name="registration_successfull">पंजीकरण सफल</string>
+            <string name="login_successful">सफलतापूर्ण प्रवेश</string>
+            <string name="confirm_your_mobile_number">अपने मोबाइल नंबर की पुष्टि करें.</string>
+            <string name="edit">संपादित करें</string>
+            <string name="confirm">की पुष्टि करें</string>
+            <string name="by_signing_up_i_agree_to_the_terms_and_condition_privacy_policies">साइन अप करके, मैं नियम और शर्त, गोपनीयता नीतियों से सहमत हूं</string>
+            <string name="sign_in">साइन इन करें</string>
+            <string name="otp_sent_to_that_mobile_number_for_verification">सत्यापन के लिए ओटीपी मोबाइल नंबर पर भेजा गया है</string>
+            <string name="verification_code">पुष्टि संख्या</string>
+            <string name="resend_otp"><u>ओटीपी पुनः भेजें</u></string>
+            <string name="otp_here">ओटीपी यहाँ</string>
+            <string name="waiting_to_automatically_detect_an_sms_sent_to_mobile_number_n_n_enter_the_otp_below_in_case_if_we_fail_to_detect_the_sms_automatically">स्वचालित रूप से मोबाइल नंबर पर भेजे गए एसएमएस का पता लगाने की प्रतीक्षा कर रहा है \n\n (यदि यह स्वचालित रूप से पता लगाने में असमर्थ है तो नीचे ओटीपी दर्ज करें.)</string>
+            <string name="confirm_otp">ओटीपी की पुष्टि करें</string>
+            <string name="back">वापस</string>
+            <string name="please_enter_otp_sent_to_your_registered_mobile_number">कृपया अपने पंजीकृत मोबाइल नंबर पर भेजे गए ओटीपी दर्ज करें</string>
+            <string name="please_enter_a_valid_otp">ओटीपी में 4 अक्षर होना चाहिए</string>
+            <string name="otp_resent_successfully">ओटीपी सफलतापूर्वक नाराज है</string>
+            <string name="otp_verification_successfull">ओटीपी सत्यापन सफल</string>
+            <string name="you_just_got_verified">आप अभी सत्यापित हो गए हैं !</string>
+            <string name="change">परिवर्तन</string>
+            <string name="your_location">आपकी स्थिति</string>
+            <string name="hello_blank_fragment">Hello blank fragment</string>
+            <string name="share_text_1"><![CDATA[आपने ऐप को अपने दोस्तों और परिवार में फैलाने का फैसला किया है.!]]></string>
+            <string name="share_text_2">हमारे विश्वास के लिए धन्यवाद और हम आने वाले भविष्य में बेहतर सेवाएं सुनिश्चित करेंगे</string>
+            <string name="post">पद</string>
+            <string name="post_an_update">एक अद्यतन पोस्ट करें</string>
+            <string name="sree_venkateshwara_temple">श्री वेंकटेश्वर मंदिर</string>
+            <string name="temple_is_very_good_and_peaceful_prime_and_decent_location_priest_is_very_well_behaving_and_good_n_n_this_is_having_good_number_of_volunteers_and_devotees_all_are_co_operative_and_friendly_volunteers_are_very_active_and_updating_very_preciously">मंदिर बहुत अच्छा और शांतिपूर्ण है। प्रधान और सभ्य स्थान। पुजारी बहुत अच्छा व्यवहार और अच्छा है. \n\n इसमें स्वयंसेवकों और भक्तों की अच्छी संख्या है। सभी सहकारी और दोस्ताना हैं। स्वयंसेवक बहुत सक्रिय हैं और बहुत मूल्यवान अद्यतन कर रहे हैं.</string>
+            <string name="add_photo">तस्वीर जोड़ो</string>
+            <string name="search_temple_posts_events">मंदिर, अभिव्यक्ति, कार्यक्रम, आदि</string>
+            <string name="sort">तरह</string>
+            <string name="filter">फिल्टर</string>
+            <string name="select_gods">भगवान का चयन करें</string>
+            <string name="_45_gods_available_nearby">45 देवताओं के पास उपलब्ध है</string>
+            <string name="temple_details">मंदिर विवरण</string>
+            <string name="comments_10">टिप्पणियाँ (10)</string>
+            <string name="type_your_comment_here">अपनी टिप्पणी यहां टाइप करें</string>
+            <string name="send">भेजना</string>
+            <string name="reset">रीसेट</string>
+            <string name="distance">दूरी</string>
+            <string name="by_god">भगवान से</string>
+            <string name="ratings">रेटिंग</string>
+            <string name="popular">लोकप्रिय</string>
+            <string name="low_to_high">नीचे से ऊपर तक</string>
+            <string name="high_to_low">ऊॅंचा से नीचा</string>
+            <string name="search">खोज</string>
+            <string name="sort_temples_by">क्रमबद्ध मंदिरों द्वारा</string>
+            <string name="popularity">लोकप्रियता</string>
+            <string name="alphabetical">वर्णमाला</string>
+            <string name="today">आज</string>
+            <string name="_12_updates">12 अपडेट</string>
+            <string name="groups">समूह</string>
+            <string name="panchang">पंचांग</string>
+            <string name="favourites">पसंदीदा</string>
+            <string name="extras">अतिरिक्त</string>
+            <string name="active_since_29_may_2018">29 मई, 2018 से सक्रिय</string>
+            <string name="profile">प्रोफाइल</string>
+            <string name="help_center">सहायता केंद्र</string>
+            <string name="write_to_us">हमें लिखें</string>
+            <string name="settings">सेटिंग्स</string>
+            <string name="version_0_1_1">संस्करण 0.1.1</string>
+            <string name="reviews_5">समीक्षा (5)</string>
+            <string name="add_new">नया जोड़ें</string>
+            <string name="namaste_user">नमस्ते </string>
+            <string name="share_it_via">इसे के माध्यम से साझा करें</string>
+            <string name="others">अन्य लोग</string>
+            <string name="varanasi">वाराणसी</string>
+            <string name="_224_reviews">224 समीक्षा</string>
+            <string name="location">स्थान</string>
+            <string name="invite_a_volunteer_to_your_temple">अपने मंदिर में एक स्वयंसेवक को आमंत्रित करें</string>
+            <string name="know_more">अधिक जानिए</string>
+            <string name="volunteer">स्वयंसेवक</string>
+            <string name="view_all">सभी को देखें</string>
+            <string name="timings">समय</string>
+            <string name="about_temple">मंदिर के बारे में</string>
+            <string name="write_an_update">एक अद्यतन लिखें</string>
+            <string name="my_favorite_temples">मेरे पसंदीदा मंदिर</string>
+            <string name="sree_hanuman_temple_updates">श्री हनुमान मंदिर अपडेट</string>
+            <string name="camera">कैमरा</string>
+            <string name="gallery">गेलरी</string>
+            <string name="cancel">रद्द करना</string>
+            <string name="quote">उद्धरण</string>
+            <string name="daily_dose_of_updated_mantras">अद्यतन मंत्रों की दैनिक खुराक</string>
+            <string name="it_is_better_to_live_your_own">अपने आप को जीना बेहतर है.</string>
+            <string name="meaning_imitation_of_somebody_else_s_life_with_perfection">अर्थ: पूर्णता के साथ किसी और के जीवन की नकल</string>
+            <string name="user_name">उपयोगकर्ता नाम</string>
+            <string name="temple0_dummy_text">Located at Chilkur in Moinabad mandal. Around 23 km from Mehdipatnam. \n\n Temple of Lord Sri Venkateshwara also popularly called "Visa Balaji"…!! This name is due to a very large number of devotees with a wish to go to abroad, got their wish fulfilled. It is customary to encircle the temple (known as Pradakshina) eleven times and pray to God for a specific wish. Once this wish comes true, the Devotee has to visit again and perform 108 Pradakshinas. This is one of the very few temples in India which does not accept monetary donations in a Hundi and therefore does not fall under the purview of endowments dept of our Government The Temple circulates a monthly magazine "Vak" which means Speech (Of GOD), nominally priced at Rs 5.00 only. This magazine is the only source of Temple-Income.</string>
+            <string name="temple1_dummy_text">Ashtalakshmi Temple is very famous temple of Goddess Lakshmi Devi, is located between DilshukhNagar and LB Nagar. The Rajagopuram of this temple is intricately carved with beautiful designs that catches the eyes of the visitors. Amazing temple with ample parking. Not commercialized and retains the spiritual aspect. A very well maintained temple with peaceful ambience. Temple timings: All days of the week from 6:00 AM - 12:00 noon and from 5:00 PM - 9:00 PM</string>
+            <string name="temple2_dummy_text">Chilkur Balaji Temple, popularly known as "Visa Balaji Temple'', is an ancient Hindu temple of Lord Balaji on the banks of Osman Sagar in Hyderabad. This temple has no hundi and neither accepts any money from devotees. It has pleasing architecture too, boasting of being one of the oldest temples in Telangana. Temple timings: All days of the week from 5:00 AM - 8:00 pm.</string>
+            <string name="temple3_dummy_text">Karmanghat Hanuman temple is one of the oldest temples in the city of Hyderabad.  Very old Hanuman temple that dates back 12th Century. It has grown into a big temple complex with multiple deities including Jagannath trinity. Surroundings are neatly maintained. Temple Timings: All days of the week from 6.00 am to 12:00 noon and from 4 pm to 8 pm.</string>
+            <string name="_29_may_2018">29 मई, 2018</string>
+            <string name="lord_krishna">भगवान कृष्ण</string>
+            <string name="remove_review">समीक्षा हटाएं</string>
+            <string name="_1_hr_ago">1 घंटा पहले</string>
+            <string name="pooja_time_23_feb_5_30_pm_7_30_pm">पूजा समय: 23 मई 5:30 PM - 7:30 PM</string>
+            <string name="_45_likes">45 को यह पसंद है</string>
+            <string name="_12_comments">12 टिप्पणियाँ</string>
+            <string name="share">साझा</string>
+            <string name="comment">टिप्पणी</string>
+            <string name="like">पसंद</string>
+            <string name="how_do_you_belong_here">आप यहाँ कैसे हैं?</string>
+            <string name="what_is_your_role">आपकी भूमिका क्या है ?</string>
+            <string name="i_am_a">मैं एक</string>
+            <string name="i_follow_spiritual">मैं आध्यात्मिक</string>
+            <string name="i_follow_religious">मैं धार्मिक</string>
+            <string name="i_am_devotee">मैं एक भक्त</string>
+            <string name="i_am_temple_member">मैं एक मंदिर सदस्य</string>
+            <string name="people_who_are_already_linked_to_this_temple">जो लोग पहले से ही इस मंदिर से जुड़े हुए हैं</string>
+            <string name="rama_swamy">राम स्वामी</string>
+            <string name="pedda_pujari">पेड्डा पुजारी</string>
+            <string name="report">रिपोर्ट</string>
+            <string name="shivaji_reddy">शिवाजी रेड्डी</string>
+            <string name="owner">मालिक</string>
+            <string name="invite_volunteer">स्वयंसेवक को आमंत्रित करें</string>
+            <string name="please_enter_volunteer_mobile_number_here">कृपया यहां स्वयंसेवी मोबाइल नंबर दर्ज करें</string>
+            <string name="send_invitation">निमंत्रण भेजना</string>
+            <string name="english">English</string>
+            <string name="telugu">తెలుగు</string>
+            <string name="hindi">हिंदी</string>
+            <string name="monday">सोमवार</string>
+            <string name="tuesday">मंगलवार</string>
+            <string name="wednesday">बुधवार</string>
+            <string name="thursday">गुरूवार</string>
+            <string name="friday">शुक्रवार</string>
+            <string name="saturday">शनिवार</string>
+            <string name="sunday">रविवार</string>
+
+            <string name="remove">हटाना</string>
+
+            <string name="connecting_you_with_your_spiritual_gurus">आपको अपने आध्यात्मिक गुरु से जोड़ता है</string>
+            <string name="daily_instant_updates_from_your_spiritual_gurus">अपने पसंदीदा गुरुओं से दैनिक तत्काल जानकारी</string>
+            <string name="highly_motivated_content_directly_delivered_to_you">आपको अत्यधिक प्रेरित, प्रेरणादायक जानकारी दिया जयेगा</string>
+            <string name="involve_you_in_the_interesting_discussions">ददिलचस्प विचार-विमर्श में शामिल हों, अपने विचार साझा करें.</string>
+
+            <string name="dev_line1">अपने पसंदीदा मंदिरों और उनकी गतिविधियों के अपडेट सीधे प्राप्त करें</string>
+            <string name="dev_line2">मंदिर समूहों के साथ भगवान के सेवा के लिए स्वयंसेवक</string>
+            <string name="dev_line3">भक्तिपूर्ण चर्चाओं में भाग लें, अपनी राय साझा करें</string>
+            <string name="dev_line4">कुंडली, धर्म और अन्य दिलचस्प विषयों पर दैनिक जानकारी.</string>
+
+            <string name="well_line1">एक पूर्ण दृष्टिकोण के साथ मानसिक और शारीरिक स्वास्थ्य पर अपडेट प्राप्त करें</string>
+            <string name="well_line2">दूसरों के लिए स्वास्थ्य और जीवन में सुधार करने के लिए स्वयंसेवक की सहायता करना</string>
+            <string name="well_line3">स्वास्थ्य संबंधी विषयों पर चर्चा करें, अपनी राय साझा करें</string>
+            <string name="well_line4">अपने स्वास्थ्य को बेहतर रखने के लिए प्राचीन और आधुनिक जानकारी प्राप्त करें.</string>
+
+            <string name="home">होम</string>
+            <string name="updates">अपडेट</string>
+            <string name="menu">मेन्यू</string>
+            <string name="posted_successfully">सफलतापूर्वक पोस्ट किया गया</string>
+            <string name="error_fetching_location_from_the_provider">प्रदाता से स्थान लाने में त्रुटि</string>
+            <string name="location_permission_mandatory_to_access_your_location">आपके स्थान तक पहुंचने के लिए स्थान अनुमति अनिवार्य है</string>
+            <string name="you_selected_popularity">आपने लोकप्रियता चुना है</string>
+            <string name="you_selected_alphabetical">आपने वर्णानुक्रम चयनित किया है</string>
+            <string name="you_selected_distance">आपने दूरी तय की है</string>
+            <string name="you_selected_ratings">आपने चयनित रेटिंग</string>
+            <string name="sharing_temple_details">मंदिर विवरण साझा करना</string>
+            <string name="read">पढ़ना</string>
+            &lt;!&ndash;<string name="i_choose">मैं चयन करता हूं</string>&ndash;&gt;
+            <string name="i_choose">मैं </string>
+            <string name="details">विवरण</string>
+            <string name="share_via">के माध्यम से बाँटे</string>
+            <string name="hide_this_post">इस पोस्ट को छुपाएं</string>
+            <string name="my_temple_groups">मेरे मंदिर समूह</string>
+            <string name="_12_volunteers">12 स्वयंसेवक</string>
+            <string name="swami_jaganath_temple_volunteer_group">स्वामी जगन्नाथ मंदिर स्वयंसेवी समूह</string>
+            <string name="rama_chari_temple_owner">राम चारी<b>(मंदिर मालिक)</b></string>
+            <string name="volunteers">स्वयंसेवक</string>
+            <string name="view_discussion">चर्चा देखें</string>
+            <string name="discussion">विचार-विमर्श</string>
+            <string name="type_your_message_here">अपना संदेश यहां टंकित करें</string>
+            <string name="you_clicked">आपने क्लिक किया :</string>
+            <string name="sent_message_successfully">संदेश सफलतापूर्वक भेजा गया</string>
+            <string name="sent_comment_successfully">सफलतापूर्वक टिप्पणी भेजा</string>
+            <string name="group_details">समूह विवरण</string>
+            <string name="dharma">धर्म</string>
+            <string name="health">स्वास्थ्य</string>
+            <string name="prayer">दुआ</string>
+            <string name="questions">प्रशन</string>
+            <string name="permission_is_mandatory">अनुमति अनिवार्य है</string>
+            <string name="please_enter_otp_manually_since_you_have_denied_permission_for_reading_sms">कृपया ओटीपी मैन्युअल रूप से दर्ज करें, क्योंकि आपने एसएमएस पढ़ने के लिए अनुमति अस्वीकार कर दी है</string>
+            <string name="temple">मंदिर</string>
+            <string name="event">घटना</string>
+            <string name="you_are">तुम हो</string>
+            <string name="temple_member">मंदिर सदस्य</string>
+
+            <string name="user_type1_line1">मंदिर सेवाएं प्राप्त करें(पूजा कार्यक्रम ,समारोह आदि)</string>
+            <string name="user_type1_line2">पसंदीदा मंदिर जानकारी प्राप्त करें</string>
+            <string name="user_type1_line3">मंदिर पदों में भाग लें</string>
+            <string name="user_type1_line4">मंदिर, भगवान की सेवा करो</string>
+
+            <string name="user_type2_line1">मंदिर प्रशासन</string>
+            <string name="user_type2_line2">मंदिर अद्यतन प्रदान करें</string>
+            <string name="user_type2_line3">स्वयंसेवी प्रबंधन</string>
+            <string name="user_type2_line4">धार्मिक कार्यक्रमों को व्यवस्थित करें \n </string>
+            <string name="user_type2_line5">सेवा प्रदाता: धर्मकर्ता, पुजारी </string>
+
+            <string name="interest_type1_line1">आध्यात्मिक गुरु</string>
+            <string name="interest_type1_line2">पसंदीदा गुरुवो से जानकारी</string>
+            <string name="interest_type1_line3">वुत्थम आध्यात्मिक सामग्री</string>
+            <string name="interest_type1_line4">आध्यात्मिक चर्चा</string>
+
+            <string name="interest_type2_line1">हिंदू मंदिर खोजें</string>
+            <string name="interest_type2_line2">पसंदीदा मंदिरों के जानकारी</string>
+            <string name="interest_type2_line3">स्वयंसेवी सेवा</string>
+            <string name="interest_type2_line4">धार्मिक चर्चाएं</string>
+            <string name="interest_type2_line5">राशिफल, धर्म, पंचांग, आदि</string>
+
+            <string name="devotee">भक्त</string>
+            <string name="social_share_text">मुझे एक ऐप मिला जो उपयोगी होगा</string>
+            <string name="social_share_subject">Share Devotted App</string>
+            <string name="failed_to_fetch_otp_please_enter_manually">ओटीपी लाने में विफल कृपया मैन्युअल रूप से दर्ज करें</string>
+            <string name="change_language">भाषा बदलो</string>
+            <string name="change_password">पासवर्ड बदलें</string>
+            <string name="please_restart_the_application_for_the_new_language_to_be_reflected">कृपया प्रतिबिंबित होने वाली नई भाषा के लिए एप्लिकेशन को पुनरारंभ करें</string>
+            <string name="restart">पुनः आरंभ करें</string>
+            <string name="old_password">पुराना पासवर्ड</string>
+            <string name="confirm_password">पासवर्ड की पुष्टि कीजिये</string>
+            <string name="new_password">नया पासवर्ड</string>
+            <string name="password_changed_successfully">पासवर्ड सफलतापूर्वक बदला गया</string>
+            <string name="please_enter_your_old_password">कृपया अपना पुराना पासवर्ड दर्ज करें</string>
+            <string name="old_password_is_wrong">पुराना पासवर्ड गलत है</string>
+            <string name="please_enter_new_password">कृपया नया पासवर्ड दर्ज करें</string>
+            <string name="please_enter_confirm_password">पासवर्ड की पुष्टि दर्ज करें</string>
+            <string name="new_password_and_confirm_password_should_match">पासवर्ड और पासवर्ड की पुष्टि करना चाहिए</string>
+            <string name="old_password_and_new_password_cannot_be_same">पुराना पासवर्ड और नया पासवर्ड समान नहीं हो सकता है</string>
+
+            &lt;!&ndash;Spiritual content&ndash;&gt;
+
+            <string name="spiritual_monday_quote">खुशी, स्वामित्व, अर्जित, पहना या खपत नहीं किया जा सकता है। खुशी प्यार, कृपा और कृतज्ञता के साथ हर मिनट रहने का आध्यात्मिक अनुभव है</string>
+            <string name="spiritual_tuesday_quote">जैसे ही एक मोमबत्ती आग के बिना जला नहीं सकती है, पुरुष आध्यात्मिक जीवन के बिना नहीं जी सकते हैं।</string>
+            <string name="spiritual_wednesday_quote">अपने पैरों को जमीन पर रखें, लेकिन अपने दिल को जितना ऊंचा हो उतना ऊंचा कर दें। औसत होने या अपने आध्यात्मिक माहौल के ठंड को आत्मसमर्पण करने से इंकार कर दें।</string>
+            <string name="spiritual_thursday_quote">संगीत आध्यात्मिक और कामुक जीवन के बीच मध्यस्थ है।</string>
+            <string name="spiritual_friday_quote">आप अच्छे व्यवहार के साथ एक अच्छा दिन नहीं कर सकते, और अच्छे व्यवहार के साथ बुरे दिन नहीं कर सकते।</string>
+            <string name="spiritual_saturday_quote">एक बुरा दिन का मतलब यह नहीं है कि आपके पास बुरा जीवन है। अपने आशीर्वादों की गणना करें, न कि आपके शाप।</string>
+            <string name="spiritual_sunday_quote">आपने पीछे की किताब नहीं पढ़ी है, तो अपने जीवन को इस तरह क्यों जीते हैं?</string>
+
+            &lt;!&ndash;Religious content&ndash;&gt;
+
+            <string name="religious_monday_prayer"><b>OM NAMAH SHIVAAY</b>\nNagendra Haaraaya Trilochanaaya\nBhasmanga Raagaya Maheshwaraya\nNithyaaya Suddhaaya Dhigambaraaya\nThasmai Na Kaaraaya Namashivaya Nama Shivaaya \n\n I offer my humble salutations to Lord Mahesvara who has a garland of serpants around the neck, who has three eyes, whose body is covered with ash, who is eternal who is pure who has the entire sky as his dress and who is embodies as the first letter Na.</string>
+            <string name="religious_tuesday_prayer"><b>OM SRI HANUMATE NAMAH</b>\nYathra Yathra raghunatha keerthanam\nThathra Thathra kruthamasthakaanjaleem\nPashpavari paripurna lochanam\nMaruthim namatha rakshasanthagam\n\n Lord Maruthi, the terror to demons (Rakshasas) is present wherever praise of Sri Rama is sung, with joyous tears in His eyes and folded hands over His head. To Him we offer our salutation (Namaskarams).</string>
+            <string name="religious_wednesday_prayer"><b>OM SHRI GANESHAAY NAMAH</b>\nVakratunda Mahakaaya, Suryakoti Samaprabha\nNirvighnam Kuru Mey Deva, Sarva Kaaryeshu Sarvada\n\nLord Ganesha has a curved trunk with a powerful body. He has the brilliance of a million suns. May the Lord, remove all the problems from the actions I aim to achieve.</string>
+            <string name="religious_thursday_prayer"><b>OM NAMO NARAYANAYA</b>\nShaantaakaaram bhujagashayanam\npadmanaabham suresham\nvishvaadhaaram gaganasadrisham\nmeghavarnam shubhaangam\nlakshmeekaantam kamalanayanam\nyogihriddhyaanagamyam\nvande vishnum bhavabhayaharam\nsarvalokaikanaatham.\n\nI bow down before Vishnu, the Lord of all worlds and the remover of all causes of fear. He is of blissful form. He lies on a serpent bed. He sports a lotus on His navel. The Lord of the celestials. He supports the whole cosmos. His limbs are exquisite and His complexion is blue like that of the sky and the rain cloud. The consort of Lakshmi. He has eyes rivaling the lotus. The yogis meditate on Him in their innermost heart.</string>
+            <string name="religious_friday_prayer"><b>OM SHRI DURGAAY NAMAH</b></string>
+            <string name="religious_saturday_prayer"><b>OM SHRI SHANAISHCHARAAY NAMAH</b></string>
+            <string name="religious_sunday_prayer"><b>OM SURYAAY NAMAH</b></string>
+
+            <string name="religious_monday_dharma">When we offer Aarthi to the God, why do we sound the bell? \n\n (a) To welcome the God \n (b) When God is having Prashad \n (c) A traditional to sound along with aarthi, scented sticks, etc \n\n Your take ??</string>
+            <string name="religious_tuesday_dharma">Serpents (Snakes) appearing in the dream is good or bad? \n\n (a) Generally when we hear or talk about the snakes during the day \n (b) In our horoscope we have Rahu or Kethu enters \n (c) Lord Subramania Swamy or Lord Nagendra wants to appear to bless you \n\n Your take ??</string>
+            <string name="religious_wednesday_dharma">When you are praying the God, if a flower fall from the idle or photo of the God, can we reuse it for God?\n\n (a) It’s a God\'s message that He has blessed you with love. So, don\'t use it again, rather take it and keep with you. \n (b) You are not devotedly doing the prayer, not offered the flower carefully. \n (c) Because it was used for God only. So, we can use it again \n\n Your take ??\nLook for correct answer tomorrow.</string>
+            <string name="religious_thursday_dharma">What should we see as soon as you wake up in the morning for good luck \n\n (a) Brahmin \n (b) Cow \n (c) Yourself in the Mirror \n (d) Tulasi Tree \n (e)  Your own hands \n\n What else we can see, do you know?</string>
+            <string name="religious_friday_dharma">Who should feed "First Feed" or Anna Prasana to the baby? \n\n (a) Father \n (b) Mother \n (c) Uncle (Mother's Brother) \n (d) Grand Father (Month's father) \n\n Who else can feed first?</string>
+            <string name="religious_saturday_dharma">Lamp should be facing our side or God\'s side \n\n (a) To God side, because we are offering to God \n (b) Our side, because we need the God's grace on us \n (c) Doesn't matter \n\n What is your take?</string>
+            <string name="religious_sunday_dharma">What is the meaning and important of Akshitha? \n\n (a) Can be used in place of anything to offer to the God, ex: Cloth, etc \n (b) To bless younger and giving our energy to them \n (c) In marriage ceremony, both groom and bride exchange electromagnetic energy. \n\n What is your take?</string>
+
+            <string name="wellness_health_content_monday">भोजन के बाद चाय पीने से दीर्घकालिक नुकसान हो सकता है? \n \n5 भोजन के बाद से बचने के लिए अधिक खाद्य पदार्थ। \n \n टीया / कॉफी: \n आयुर्वेद कुछ सामान्य चीजों का वर्णन करता है जिसे किसी व्यक्ति को दोपहर का खाना या रात के खाने के बाद नहीं करना चाहिए। आज, स्वास्थ्य विज्ञान अनुसंधान और तथ्यों के साथ इसका समर्थन कर रहा है। चलो खाने के बाद तत्काल टालने के लिए क्या चीजें हैं। \n \n इन पेय पदार्थों को लाभ होता है जब मध्यम मात्रा में खपत होती है। किसी भी भोजन के बाद उन्हें कम से कम एक घंटे पीएं। \n \n <b> फल: </b> \n आपके पेट से यात्रा करने और आंतों में पचाने के लिए किसी भी फल (केले को छोड़कर) के लिए लगभग 20 मिनट लगते हैं। भोजन के बाद एक फल खाने से भोजन के साथ अटक जाता है, इस प्रकार आंतों के समय में यात्रा नहीं होती है, और परिणामस्वरूप खराब हो जाता है, और भोजन को भी खराब कर देता है! \n \n <b> स्नान न करें </b> \ आयुर्वेद के अनुसार, भोजन के बाद स्नान करने से रक्त और हाथों में रक्त का प्रवाह बढ़ जाता है। इस प्रकार पेट के चारों ओर रक्त की मात्रा कम हो जाएगी। यह पेट की पाचन तंत्र को कमजोर करता है। \n \n <b> नींद: </b> \n भोजन ठीक से पचा नहीं जाएगा, जिससे गैस्ट्रिक मुद्दों का कारण बनता है। \n \n <b> तैरना न करें या भौतिक न करें अभ्यास </b> \n भोजन खाने के बाद कम से कम 30 मिनट से अधिक समय तक इंतजार करना सबसे अच्छा है। ऐसा इसलिए होता है क्योंकि खाने के बाद आपके गैस्ट्रोइंटेस्टाइनल ट्रैक्ट में अधिक रक्त खींचा जाता है, जो मामूली ऐंठन का कारण बन सकता है। \n \n <b> अपनी बेल्ट को ढीला न करें </b> \n असल में, लोग एक शानदार भोजन के बाद अपने बेल्ट को ढीला करते हैं। आप एक बार फिर से आरामदायक महसूस करेंगे, जिसका मतलब है कि आप अतिरक्षण जारी रख सकते हैं। बेल्ट को ढीला करना और फिर इसे फिर से कसने से आंत को मोड़ना पड़ सकता है। \n \n <b> धूम्रपान न करें </b> \n अब, यह नियम आयुर्वेद द्वारा नहीं बल्कि आधुनिक विज्ञान द्वारा किया गया है। प्रयोग साबित करते हैं कि भोजन के ठीक बाद एक सिगरेट धूम्रपान करना 10 सिगरेट धूम्रपान करने के लिए तुलनीय है।</string>
+            <string name="wellness_health_content_tuesday">रासायनिक एयर फ्रेशर्स आपके नसों के लिए हानिकारक हो सकता है। इसके बजाय, अपने पसंदीदा आवश्यक तेलों को फ्रेशनर के रूप में उपयोग करें।</string>
+            <string name="wellness_health_content_wednesday">प्रत्येक भोजन से पहले एक कप पानी में सेब साइडर विनीगर का एक बड़ा चमचा गुर्दे के पत्थरों को भंग करने में मदद करता है।</string>
+            <string name="wellness_health_content_thursday">ठंड और गले के गले को ठीक करने के लिए शहद के एक चम्मच के साथ अदरक का रस आधा चम्मच पीएं।</string>
+            <string name="wellness_health_content_friday">खाद्य भंडारण के लिए प्लास्टिक के कंटेनर से बचें। कांच, स्टील, सिरेमिक कंटेनर का प्रयोग करें। सिरेमिक माइक्रो ओवन के लिए अच्छा है।</string>
+            <string name="wellness_health_content_saturday">रक्त दान करने के स्वास्थ्य लाभ। संतुलन लोहे, रक्त परिसंचरण में सुधार, कैलोरी को तेजी से जलता है, लीवर स्वास्थ्य में सुधार करता है, नए रक्त कोशिकाओं का गठन शुरू करता है।</string>
+            <string name="wellness_health_content_sunday">सीवीएस (कंप्यूटर विजन सिंड्रोम) के कारण क्या हैं? \n लापरवाही, लंबे समय तक कम ध्यान केंद्रित करें। तो, आप ऐसा करके \n \n कर सकते हैं\n\n<b> 20 के नियम का पालन करें </b>। 20-सेकंड ब्रेक लें और हर 20 मिनट में 20 फीट दूर देखें \n <b> आंखों का ब्रेक लें। </b> लंबे समय तक काम करने से बचें। अपने ब्रेक में अपनी आंखें बंद करो। एक दिन में कम से कम 3 से 5 ब्रेक लें। \n उचित उचित प्रकाश डालें। \n कंप्यूटर स्क्रीन चमक समायोजित करें। \n चमक को एनिमेट करें \n आंखों को अपनी आंखों को लुब्रिकेट करने के लिए छोड़ दें।</string>
+            <string name="read_more"> + और पढो</string>
+            <string name="read_less"> - कम पढ़ें</string>
+            <string name="spiritual_features">आध्यात्मिक विशेषताएं</string>
+            <string name="religious_features">धार्मिक विशेषताएं</string>
+            <string name="services_i_receive">मुझे मिलने वाले सेवाएं</string>
+            <string name="services_we_provide">सेवाएं हम प्रदान करते हैं</string>
+            <string name="horoscope">कुंडली</string>
+            <string name="aries">मेष राशी</string>
+            <string name="yesterday">कल</string>
+            <string name="this_week">इस सप्ताह</string>
+            <string name="this_month">इस महीने का</string>
+            <string name="chilukuru_balaji_temple_volunteer_group">चिलकुर बालाजी मंदिर स्वयंसेवी समूह</string>
+            <string name="hanuman_temple_volunteer_group">हनुमान मंदिर स्वयंसेवी समूह</string>
+            <string name="ashtalakshmi_temple"><![CDATA[अष्टलाक्ष्मी मंदिर, कोठापेट, हैदराबाद]]></string>
+            <string name="chilkur_balaji_temple"><![CDATA[चिलकुर बालाजी मंदिर, हैदराबाद]]></string>
+            <string name="karmanghat_hanuman_temple">कर्मंगघा हनुमान मंदिर, हैदराबाद</string>
+            <string name="sai_baba_temple">साईं बाबा मंदिर</string>
+            <string name="sri_venkateswara_swamy_temple">श्री वेंकटेश्वर स्वामी मंदिर</string>
+            <string name="sri_krishna_bagavan_swamy_temple">श्री कृष्णा भगवान स्वामी मंदिर</string>
+            <string name="lord_shiva_temple">भगवान शिव मंदिर</string>
+            <string name="aries_horoscope_content">तनाव आपको मामूली बीमारी का कारण बन सकता है। आराम करने के लिए दोस्तों और परिवार के बीच बैठ जाओ। यदि आप पर्यावरण में निवेश करते हैं, तो आपको लाभ मिलेगा। दूरस्थ रिश्तेदारों से अप्रत्याशित अच्छी खबर पूरे परिवार में खुश क्षण लाती है। आज रोमांस एक महान उत्साह है, जिस व्यक्ति को आप सबसे अधिक पसंद करते हैं उससे संपर्क करें और दिन को सर्वश्रेष्ठ बनाएं। दोस्तों महत्वपूर्ण हैं। लेकिन इस दिन अपनी स्थिति को "व्यस्त" रखें। क्योंकि आज आपको कार्यालय में एक मजेदार नौकरी मिलनी है। गुप्त दुश्मन आप और आपके अभियानों और अफवाहों के खिलाफ अभियान करने के लिए उत्सुक हैं। आज आपके वैवाहिक जीवन के सबसे महान दिनों में से एक है।</string>
+            <string name="naveen">नवीन</string>
+            <string name="sadguru">समीर</string>
+            <string name="day">दिन :</string>
+            <string name="date">तारीख :</string>
+            <string name="sunrise">सूर्योदय :</string>
+            <string name="sunset">सूर्यास्त :</string>
+            <string name="thiti">एफएफ :</string>
+            <string name="ashtami_19_07_2018_13_37_to_20_07_2018_13_20_followed_by_navami">भजन 10:22 पढ़िए</string>
+            <string name="nakshatra">सितारा :</string>
+            <string name="chithirai_19_07_2018_07_54_to_20_07_2018_08_10_followed_by_swaathi">Chithirai -19.07.2018 07:54 to 20.07.2018 08:10 Followed By Swaathi</string>
+            <string name="tamil_yoga">योग :</string>
+            <string name="siddha_19_07_2018_07_54_to_20_07_2018_08_10_followed_by_siddha">ठीक है 14:45</string>
+            <string name="rahu_kalam">राहु कलम :</string>
+            <string name="abhijit">अभिजीत मुहूर्तम :</string>
+            <string name="gulikai_kalam">अमृता अवधि :</string>
+            <string name="yamaganda">Yamaganda :</string>
+
+        </resources>
+        -->

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:id="@+id/relTopBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/five_dp"
+                android:background="@color/colorPrimary">
+
+            <com.careapp.views.AppTextView
+                    android:id="@+id/txtHeading"
+                    android:padding="@dimen/ten_dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="@dimen/fifteen_dp"
+                    android:drawableEnd="@drawable/ic_down"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/seventeen_sp"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+                android:id="@+id/cardCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relTopBar"
+                app:contentPadding="@dimen/five_dp"
+                app:cardMaxElevation="@dimen/two_dp"
+                android:layout_margin="@dimen/three_dp"
+                app:cardBackgroundColor="@color/semi_transparent"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="@dimen/two_dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardCornerRadius="@dimen/four_dp">
+
+            <com.careapp.views.AppTextView
+                    android:id="@+id/txtCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/five_dp"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp"/>
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/cardCategory"
+                android:layout_above="@+id/relBottom">
+
+            <com.careapp.views.CustomViewPagerSingleLoad
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"/>
+
+            <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:visibility="visible"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/relBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="@dimen/three_dp">
+
+            <ImageView
+                    android:id="@+id/imgViewPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/eight_dp"
+                    android:layout_alignParentStart="true"
+                    app:srcCompat="@drawable/ic_back_black"/>
+
+            <com.careapp.views.AppTextView
+                    android:id="@+id/txtQuestionCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/twenty_sp"
+                    android:text="11/15"
+                    app:txt_font_type="bold"/>
+
+            <ImageView
+                    android:id="@+id/imgViewNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/eight_dp"
+                    android:layout_alignParentEnd="true"
+                    app:srcCompat="@drawable/ic_next_black_big"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+def getUrlProps(path) {
+    Properties urlProperties = new Properties()
+    urlProperties.load(new FileInputStream(file(path)))
+    return urlProperties
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.careapp"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        dataBinding {
+            enabled = true
+        }
+        vectorDrawables.useSupportLibrary true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.kotlin
+    implementation rootProject.ext.supportAppCompat
+    implementation rootProject.ext.supportDesign
+    implementation rootProject.ext.cardview
+    implementation rootProject.ext.supportV4
+    implementation rootProject.ext.supportVectorDrawable
+    implementation rootProject.ext.constraintlayout
+    implementation rootProject.ext.recyclerview
+    implementation rootProject.ext.multiDex
+    implementation rootProject.ext.gson
+    implementation rootProject.ext.retrofit
+    implementation rootProject.ext.okhttp
+    implementation rootProject.ext.okhttplogginginterceptor
+    implementation rootProject.ext.retrofitconverter
+    implementation rootProject.ext.glide
+    annotationProcessor rootProject.ext.glideAnnotationProcessor
+    implementation rootProject.ext.firebase
+
+    testImplementation rootProject.ext.junit
+    androidTestImplementation rootProject.ext.testRunner
+    androidTestImplementation rootProject.ext.espressocore
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.3.10"
+}

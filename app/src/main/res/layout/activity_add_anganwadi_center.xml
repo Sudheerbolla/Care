@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/twentyfive_dp"
+                android:paddingStart="@dimen/twentyfive_dp"
+                android:paddingEnd="@dimen/twentyfive_dp"
+                android:orientation="vertical">
+
+            <Spinner
+                    android:id="@+id/spinnerDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:paddingStart="@dimen/twenty_dp"
+                    android:paddingEnd="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:textSize="@dimen/fifteen_sp"
+                    android:textColor="@color/colorBlack"
+                    android:prompt="@string/select_district"/>
+
+            <Spinner
+                    android:id="@+id/spinnerBlock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:paddingStart="@dimen/twenty_dp"
+                    android:paddingEnd="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:textSize="@dimen/fifteen_sp"
+                    android:textColor="@color/colorBlack"
+                    android:prompt="@string/select_block"/>
+
+            <Spinner
+                    android:id="@+id/spinnerAWC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:paddingBottom="@dimen/ten_dp"
+                    android:paddingStart="@dimen/twenty_dp"
+                    android:paddingEnd="@dimen/twenty_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:textSize="@dimen/fifteen_sp"
+                    android:textColor="@color/colorBlack"
+                    android:prompt="@string/select_awc"/>
+            <!--
+                        <com.careapp.views.AppEditText
+                                android:id="@+id/edtName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edt_background"
+                                android:paddingTop="@dimen/ten_dp"
+                                android:paddingBottom="@dimen/ten_dp"
+                                android:paddingStart="@dimen/twenty_dp"
+                                android:paddingEnd="@dimen/twenty_dp"
+                                android:layout_marginStart="@dimen/fifteen_dp"
+                                android:layout_marginEnd="@dimen/fifteen_dp"
+                                android:layout_marginTop="@dimen/fifteen_dp"
+                                android:textSize="@dimen/fifteen_sp"
+                                android:textColor="@color/colorBlack"
+                                android:inputType="text"
+                                android:textColorHint="@color/color_vDarkGrey"
+                                android:hint="@string/enter_name"/>
+
+                        <com.careapp.views.AppEditText
+                                android:id="@+id/edtDesignation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edt_background"
+                                android:paddingTop="@dimen/ten_dp"
+                                android:paddingBottom="@dimen/ten_dp"
+                                android:paddingStart="@dimen/twenty_dp"
+                                android:paddingEnd="@dimen/twenty_dp"
+                                android:layout_marginStart="@dimen/fifteen_dp"
+                                android:layout_marginEnd="@dimen/fifteen_dp"
+                                android:layout_marginTop="@dimen/fifteen_dp"
+                                android:textSize="@dimen/fifteen_sp"
+                                android:textColor="@color/colorBlack"
+                                android:inputType="text"
+                                android:textColorHint="@color/color_vDarkGrey"
+                                android:hint="@string/enter_designation"/>
+
+                        <com.careapp.views.AppEditText
+                                android:id="@+id/edtDepartment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edt_background"
+                                android:paddingTop="@dimen/ten_dp"
+                                android:paddingBottom="@dimen/ten_dp"
+                                android:paddingStart="@dimen/twenty_dp"
+                                android:paddingEnd="@dimen/twenty_dp"
+                                android:layout_marginStart="@dimen/fifteen_dp"
+                                android:layout_marginEnd="@dimen/fifteen_dp"
+                                android:layout_marginTop="@dimen/fifteen_dp"
+                                android:textSize="@dimen/fifteen_sp"
+                                android:textColor="@color/colorBlack"
+                                android:inputType="text"
+                                android:textColorHint="@color/color_vDarkGrey"
+                                android:hint="@string/enter_department"/>
+
+                        -->
+            <com.careapp.views.AppTextView
+                    android:id="@+id/txtAddAnganwadiCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_green"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/fifteen_dp"
+                    android:paddingEnd="@dimen/fifteen_dp"
+                    android:paddingTop="@dimen/eight_dp"
+                    android:paddingBottom="@dimen/eight_dp"
+                    android:longClickable="false"
+                    android:textIsSelectable="false"
+                    android:layout_marginTop="@dimen/twentyfive_dp"
+                    android:textSize="@dimen/fifteen_sp"
+                    android:textColor="@color/colorWhite"
+                    android:inputType="text"
+                    android:textColorHint="@color/colorWhite"
+                    android:text="@string/add_anganwadi_center"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

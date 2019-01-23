@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">CareApp</string>
+    <string name="welcome_to_care">Welcome to Care!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="select_anganwadi_center">Select Anganwadi Center</string>
+    <string name="this_is_simple_mcq_question_with_single_option_as_answer">This is simple mcq question with single
+        option as answer
+    </string>
+    <string name="this_is_simple_mcq_question_with_one_or_many_answers">This is simple mcq question with one or many
+        answers
+    </string>
+    <string name="this_is_simple_mcq_question_where_answer_has_to_be_entered_by_user_in_the_input_field">This is simple
+        mcq question where answer has to be entered by user in the input field.
+    </string>
+    <string name="this_is_simple_mcq_question_where_user_can_enter_multiple_answers">This is simple
+        mcq question where user can enter multiple answers as a list.
+    </string>
+
+    <string name="this_is_a_hint_to_answer_the_above_question">This is a hint to answer the above question.</string>
+    <string name="option_1">Option 1</string>
+    <string name="option_2">Option 2</string>
+    <string name="option_3">Option 3</string>
+    <string name="option_4">Option 4</string>
+    <string name="write_your_answer_here">Write your answer here</string>
+    <string name="please_answer_this_before_proceeding">Please answer this before proceeding</string>
+    <string name="answer_1">Answer 1</string>
+    <string name="answer_2">Answer 2</string>
+    <string name="anganwadi_questions_finished">anganwadi questions finished</string>
+    <string name="home_list">Home List</string>
+    <string name="no_data_available_at_current_time">No data available at current time.</string>
+    <string name="please_enter_username">Please enter UserName.</string>
+    <string name="please_enter_password">Please enter password.</string>
+    <string name="ok">OK</string>
+    <string name="retry">Retry</string>
+    <string name="no_internet_connection">No Internet Connection.</string>
+    <string name="something_went_wrong">Something went wrong.</string>
+
+    <string name="select_district">Select District</string>
+    <string name="select_block">Select Block</string>
+    <string name="select_awc">Select AWC</string>
+
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_designation">Enter Designation</string>
+    <string name="enter_department">Enter Department</string>
+    <string name="add_anganwadi_center">Add Anganwadi Center</string>
+
+</resources>
